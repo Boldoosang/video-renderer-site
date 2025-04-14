@@ -6,17 +6,22 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@azure/storage-blob": "^12.27.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@remotion/bundler": "^4.0.286",
     "@remotion/cli": "4.0.221",
     "@remotion/fonts": "4.0.221",
     "@remotion/lambda": "4.0.221",
     "@remotion/paths": "4.0.221",
+    "@remotion/renderer": "^4.0.286",
     "@remotion/shapes": "4.0.221",
     "@remotion/transitions": "4.0.221",
     "@remotion/zod-types": "4.0.221",
     "@types/lodash.merge": "^4.6.9",
-    "dotenv": "^16.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "lodash.merge": "^4.6.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -33,7 +38,7 @@
     "typescript": "^4.9.4"
   },
   "scripts": {
-    "start": "remotion studio",
+    "start": "node server.js",
     "build": "remotion render RenderVideo out/video.mp4",
     "upgrade": "remotion upgrade",
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"
