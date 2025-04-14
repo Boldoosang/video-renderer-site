@@ -18,7 +18,9 @@ app.use(express.json());
 const AZURE_STORAGE_CONNECTION_STRING =
   process.env.AZURE_STORAGE_CONNECTION_STRING;
 const CONTAINER_NAME = process.env.AZURE_STORAGE_CONTAINER_NAME;
-
+app.get("/", (req, res) => {
+  res.send("Remotion render server is running");
+});
 app.post("/api/render", async (req, res) => {
   try {
     const { design } = req.body;
